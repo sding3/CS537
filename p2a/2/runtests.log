@@ -1,0 +1,19 @@
+starting build
+
+**********************************************************************
+
+Test build
+build project using make
+
+**********************************************************************
+Trying to build project using make
+make
+gcc -Werror -Wall -o whoosh whoosh.c
+
+
+test build FAILED
+ (build project using make)
+ required file 'libcrawler.so' does not exist after make
+
+Skipped 9 tests.
+To keep testing after failing a test, use flag '-c' or '--continue'

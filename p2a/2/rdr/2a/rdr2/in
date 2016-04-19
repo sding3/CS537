@@ -1,0 +1,2 @@
+ls /bad > output
+exit

@@ -1,0 +1,1031 @@
+starting build
+
+**********************************************************************
+
+Test build
+build xv6 using make
+
+**********************************************************************
+Trying to build project using make
+make
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+		-M -MG kernel/sysproc.c -MF kernel/sysproc.d -MT kernel/sysproc.d -MT kernel/sysproc.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+		-M -MG kernel/proc.c -MF kernel/proc.d -MT kernel/proc.d -MT kernel/proc.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/proc.o kernel/proc.c
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o kernel/sysproc.o kernel/sysproc.c
+ld  -m    elf_i386 -nostdlib --omagic \
+		--section-start=.text=0x100000 --entry=main --output=kernel/kernel \
+		kernel/multiboot.o kernel/data.o kernel/bio.o kernel/console.o kernel/exec.o kernel/file.o kernel/fs.o kernel/ide.o kernel/ioapic.o kernel/kalloc.o kernel/kbd.o kernel/lapic.o kernel/main.o kernel/mp.o kernel/picirq.o kernel/pipe.o kernel/proc.o kernel/spinlock.o kernel/string.o kernel/swtch.o kernel/syscall.o kernel/sysfile.o kernel/sysproc.o kernel/timer.o kernel/trapasm.o kernel/trap.o kernel/uart.o kernel/vectors.o kernel/vm.o \
+		-b binary initcode bootother
+dd if=/dev/zero of=xv6.img count=10000
+10000+0 records in
+10000+0 records out
+5120000 bytes (5.1 MB) copied, 0.0233091 s, 220 MB/s
+dd if=kernel/bootblock of=xv6.img conv=notrunc
+1+0 records in
+1+0 records out
+512 bytes (512 B) copied, 0.000141258 s, 3.6 MB/s
+dd if=kernel/kernel of=xv6.img seek=1 conv=notrunc
+249+1 records in
+249+1 records out
+127689 bytes (128 kB) copied, 0.000665878 s, 192 MB/s
+
+
+test build PASSED
+ (build xv6 using make)
+
+starting clone
+
+**********************************************************************
+
+Test clone
+clone and verify that address space is shared
+
+**********************************************************************
+Running xv6 user progam /home/shangd/projects/cs537/p4b/tests/tests/clone.c
+Trying to build project using make
+make
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+		-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o user/thread.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+forktest
+init
+stressfs
+echo
+sh
+mkdir
+clone3
+kill
+clone2
+rm
+README
+tester
+clone
+grep
+ls
+test
+join2
+cat
+zombie
+usertests
+size
+ln
+wc
+balloc: first 622 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/usr/bin/qemu-system-x86_64 -nographic -hdb fs.img xv6.img -smp 2
+xv6...
+lapicinit: 1 0xfee00000
+cpu1: starting
+cpu0: starting
+init: starting sh
+$ tester
+tester
+TEST PASSED
+in wait by tester
+proc is sh
+freeing tester's pgdir
+
+
+test clone PASSED (9 of 9)
+ (clone and verify that address space is shared)
+
+starting badclone
+
+**********************************************************************
+
+Test badclone
+clone with bad stack argument
+
+**********************************************************************
+Running xv6 user progam /home/shangd/projects/cs537/p4b/tests/tests/badclone.c
+Trying to build project using make
+make
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+		-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o user/thread.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+forktest
+init
+stressfs
+echo
+sh
+mkdir
+clone3
+kill
+clone2
+rm
+README
+tester
+clone
+grep
+ls
+test
+join2
+cat
+zombie
+usertests
+size
+ln
+wc
+balloc: first 622 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/usr/bin/qemu-system-x86_64 -nographic -hdb fs.img xv6.img -smp 2
+xv6...
+lapicinit: 1 0xfee00000
+cpu1: starting
+cpu0: starting
+init: starting sh
+$ tester
+tester
+user/tester.c: 40 assert failed (clone(worker, 0, stack) == -1)
+TEST FAILED
+in wait by tester
+proc is sh
+freeing tester's pgdir
+
+
+test badclone FAILED (0 of 6)
+ (clone with bad stack argument)
+ tester failed
+
+starting join4
+
+**********************************************************************
+
+Test join4
+join, not wait, should handle threads
+
+**********************************************************************
+Running xv6 user progam /home/shangd/projects/cs537/p4b/tests/tests/join4.c
+Trying to build project using make
+make
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+		-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o user/thread.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+forktest
+init
+stressfs
+echo
+sh
+mkdir
+clone3
+kill
+clone2
+rm
+README
+tester
+clone
+grep
+ls
+test
+join2
+cat
+zombie
+usertests
+size
+ln
+wc
+balloc: first 623 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/usr/bin/qemu-system-x86_64 -nographic -hdb fs.img xv6.img -smp 2
+xv6...
+lapicinit: 1 0xfee00000
+cpu1: starting
+cpu0: starting
+init: starting sh
+$ tester
+tester
+TEST PASSED
+in wait by tester
+proc is sh
+
+
+test join4 PASSED (3 of 3)
+ (join, not wait, should handle threads)
+
+starting thread2
+
+**********************************************************************
+
+Test thread2
+memory leaks from thread library?
+
+**********************************************************************
+Running xv6 user progam /home/shangd/projects/cs537/p4b/tests/tests/thread2.c
+Trying to build project using make
+make
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+		-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o user/thread.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+forktest
+init
+stressfs
+echo
+sh
+mkdir
+clone3
+kill
+clone2
+rm
+README
+tester
+clone
+grep
+ls
+test
+join2
+cat
+zombie
+usertests
+size
+ln
+wc
+balloc: first 623 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/usr/bin/qemu-system-x86_64 -nographic -hdb fs.img xv6.img -smp 2
+xv6...
+lapicinit: 1 0xfee00000
+cpu1: starting
+cpu0: starting
+init: starting sh
+$ tester
+tester
+TEST PASSED
+in wait by tester
+proc is sh
+freeing tester's pgdir
+
+
+test thread2 PASSED (7 of 7)
+ (memory leaks from thread library?)
+
+starting join3
+
+**********************************************************************
+
+Test join3
+join should not handle child processes (forked)
+
+**********************************************************************
+Running xv6 user progam /home/shangd/projects/cs537/p4b/tests/tests/join3.c
+Trying to build project using make
+make
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+		-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o user/thread.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+forktest
+init
+stressfs
+echo
+sh
+mkdir
+clone3
+kill
+clone2
+rm
+README
+tester
+clone
+grep
+ls
+test
+join2
+cat
+zombie
+usertests
+size
+ln
+wc
+balloc: first 621 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/usr/bin/qemu-system-x86_64 -nographic -hdb fs.img xv6.img -smp 2
+xv6...
+lapicinit: 1 0xfee00000
+cpu1: starting
+cpu0: starting
+init: starting sh
+$ tester
+tester
+TEST PASSED
+in wait by tester
+proc is init
+freeing tester's pgdir
+
+
+test join3 PASSED (3 of 3)
+ (join should not handle child processes (forked))
+
+starting join2
+
+**********************************************************************
+
+Test join2
+join argument checking
+
+**********************************************************************
+Running xv6 user progam /home/shangd/projects/cs537/p4b/tests/tests/join2.c
+Trying to build project using make
+make
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+		-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o user/thread.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+forktest
+init
+stressfs
+echo
+sh
+mkdir
+clone3
+kill
+clone2
+rm
+README
+tester
+clone
+grep
+ls
+test
+join2
+cat
+zombie
+usertests
+size
+ln
+wc
+balloc: first 623 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/usr/bin/qemu-system-x86_64 -nographic -hdb fs.img xv6.img -smp 2
+xv6...
+lapicinit: 1 0xfee00000
+cpu1: starting
+cpu0: starting
+init: starting sh
+$ tester
+tester
+TEST PASSED
+in wait by tester
+proc is sh
+freeing tester's pgdir
+$
+
+test join2 PASSED (6 of 6)
+ (join argument checking)
+
+starting clone3
+
+**********************************************************************
+
+Test clone3
+clone copies file descriptors, but doesn't share
+
+**********************************************************************
+Running xv6 user progam /home/shangd/projects/cs537/p4b/tests/tests/clone3.c
+Trying to build project using make
+make
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+		-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o user/thread.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+forktest
+init
+stressfs
+echo
+sh
+mkdir
+clone3
+kill
+clone2
+rm
+README
+tester
+clone
+grep
+ls
+test
+join2
+cat
+zombie
+usertests
+size
+ln
+wc
+balloc: first 623 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/usr/bin/qemu-system-x86_64 -nographic -hdb fs.img xv6.img -smp 2
+xv6...
+lapicinit: 1 0xfee00000
+cpu1: starting
+cpu0: starting
+init: starting sh
+$ tester
+tester
+TEST PASSED
+in wait by tester
+proc is sh
+f
+
+test clone3 PASSED (3 of 3)
+ (clone copies file descriptors, but doesn't share)
+
+starting clone2
+
+**********************************************************************
+
+Test clone2
+clone and play with the argument
+
+**********************************************************************
+Running xv6 user progam /home/shangd/projects/cs537/p4b/tests/tests/clone2.c
+Trying to build project using make
+make
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+		-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o user/thread.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+forktest
+init
+stressfs
+echo
+sh
+mkdir
+clone3
+kill
+clone2
+rm
+README
+tester
+clone
+grep
+ls
+test
+join2
+cat
+zombie
+usertests
+size
+ln
+wc
+balloc: first 622 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/usr/bin/qemu-system-x86_64 -nographic -hdb fs.img xv6.img -smp 2
+xv6...
+lapicinit: 1 0xfee00000
+cpu1: starting
+cpu0: starting
+init: starting sh
+$ tester
+tester
+TEST PASSED
+in wait by tester
+proc is sh
+freeing tester's pgdir
+
+
+test clone2 PASSED (6 of 6)
+ (clone and play with the argument)
+
+starting stack
+
+**********************************************************************
+
+Test stack
+set up stack correctly (and without extra items)
+
+**********************************************************************
+Running xv6 user progam /home/shangd/projects/cs537/p4b/tests/tests/stack.c
+Trying to build project using make
+make
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+		-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o user/thread.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+forktest
+init
+stressfs
+echo
+sh
+mkdir
+clone3
+kill
+clone2
+rm
+README
+tester
+clone
+grep
+ls
+test
+join2
+cat
+zombie
+usertests
+size
+ln
+wc
+balloc: first 622 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/usr/bin/qemu-system-x86_64 -nographic -hdb fs.img xv6.img -smp 2
+xv6...
+lapicinit: 1 0xfee00000
+cpu1: starting
+cpu0: starting
+init: starting sh
+$ tester
+tester
+TEST PASSED
+in wait by tester
+proc is sh
+freeing tester's pgdir
+
+
+test stack PASSED (8 of 8)
+ (set up stack correctly (and without extra items))
+
+starting size
+
+**********************************************************************
+
+Test size
+check that address space size is updated in threads
+
+**********************************************************************
+Running xv6 user progam /home/shangd/projects/cs537/p4b/tests/tests/size.c
+Trying to build project using make
+make
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+		-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o user/thread.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+forktest
+init
+stressfs
+echo
+sh
+mkdir
+clone3
+kill
+clone2
+rm
+README
+tester
+clone
+grep
+ls
+test
+join2
+cat
+zombie
+usertests
+size
+ln
+wc
+balloc: first 624 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/usr/bin/qemu-system-x86_64 -nographic -hdb fs.img xv6.img -smp 2
+xv6...
+lapicinit: 1 0xfee00000
+cpu1: starting
+cpu0: starting
+init: starting sh
+$ tester
+tester
+TEST PASSED
+in wait by tester
+proc is sh
+freeing tester's pgdir
+
+
+test size PASSED (7 of 7)
+ (check that address space size is updated in threads)
+
+starting multi
+
+**********************************************************************
+
+Test multi
+multiple threads with some depth of function calls
+
+**********************************************************************
+Running xv6 user progam /home/shangd/projects/cs537/p4b/tests/tests/multi.c
+Trying to build project using make
+make
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+		-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o user/thread.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+forktest
+init
+stressfs
+echo
+sh
+mkdir
+clone3
+kill
+clone2
+rm
+README
+tester
+clone
+grep
+ls
+test
+join2
+cat
+zombie
+usertests
+size
+ln
+wc
+balloc: first 624 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/usr/bin/qemu-system-x86_64 -nographic -hdb fs.img xv6.img -smp 2
+xv6...
+lapicinit: 1 0xfee00000
+cpu1: starting
+cpu0: starting
+init: starting sh
+$ tester
+tester
+TEST PASSED
+in wait by tester
+proc is sh
+free
+
+test multi PASSED (8 of 8)
+ (multiple threads with some depth of function calls)
+
+starting noexit
+
+**********************************************************************
+
+Test noexit
+no exit call in thread, should trap at bogus address
+
+**********************************************************************
+Running xv6 user progam /home/shangd/projects/cs537/p4b/tests/tests/noexit.c
+Trying to build project using make
+make
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+		-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o user/thread.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+forktest
+init
+stressfs
+echo
+sh
+mkdir
+clone3
+kill
+clone2
+rm
+README
+tester
+clone
+grep
+ls
+test
+join2
+cat
+zombie
+usertests
+size
+ln
+wc
+balloc: first 622 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/usr/bin/qemu-system-x86_64 -nographic -hdb fs.img xv6.img -smp 2
+xv6...
+lapicinit: 1 0xfee00000
+cpu1: starting
+cpu0: starting
+init: starting sh
+$ tester
+tester
+pid 4 tester: trap 14 err 5 on cpu 1 eip 0xffffffff addr 0xffffffff--kill proc
+TEST PASSED
+
+
+test noexit PASSED (7 of 7)
+ (no exit call in thread, should trap at bogus address)
+
+starting join
+
+**********************************************************************
+
+Test join
+clone and join syscalls
+
+**********************************************************************
+Running xv6 user progam /home/shangd/projects/cs537/p4b/tests/tests/join.c
+Trying to build project using make
+make
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+		-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o user/thread.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+forktest
+init
+stressfs
+echo
+sh
+mkdir
+clone3
+kill
+clone2
+rm
+README
+tester
+clone
+grep
+ls
+test
+join2
+cat
+zombie
+usertests
+size
+ln
+wc
+balloc: first 623 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/usr/bin/qemu-system-x86_64 -nographic -hdb fs.img xv6.img -smp 2
+xv6...
+lapicinit: 1 0xfee00000
+cpu1: starting
+cpu0: starting
+init: starting sh
+$ tester
+tester
+TEST PASSED
+in wait by tester
+proc is sh
+freeing tester's pgdir
+
+
+test join PASSED (9 of 9)
+ (clone and join syscalls)
+
+starting thread
+
+**********************************************************************
+
+Test thread
+thread user library functions
+
+**********************************************************************
+Running xv6 user progam /home/shangd/projects/cs537/p4b/tests/tests/thread.c
+Trying to build project using make
+make
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+		-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o user/thread.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+forktest
+init
+stressfs
+echo
+sh
+mkdir
+clone3
+kill
+clone2
+rm
+README
+tester
+clone
+grep
+ls
+test
+join2
+cat
+zombie
+usertests
+size
+ln
+wc
+balloc: first 622 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/usr/bin/qemu-system-x86_64 -nographic -hdb fs.img xv6.img -smp 2
+xv6...
+lapicinit: 1 0xfee00000
+cpu1: starting
+cpu0: starting
+init: starting sh
+$ tester
+tester
+TEST PASSED
+in wait by tester
+
+
+test thread PASSED (10 of 10)
+ (thread user library functions)
+
+starting locks
+
+**********************************************************************
+
+Test locks
+test lock correctness
+
+**********************************************************************
+Running xv6 user progam /home/shangd/projects/cs537/p4b/tests/tests/locks.c
+Trying to build project using make
+make
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 \
+		-M -MG user/tester.c -MF user/tester.d -MT user/tester.d -MT user/tester.o
+gcc  -I include -nostdinc -Wall -Werror -ggdb -fno-pic -fno-builtin -fno-strict-aliasing -fno-stack-protector -m32 -c -o user/tester.o user/tester.c
+ld  -m    elf_i386 -nostdlib --omagic --entry=main --section-start=.text=0x0 --output=user/bin/tester user/tester.o user/ulib.o user/usys.o user/printf.o user/umalloc.o user/thread.o
+cp user/bin/tester fs/tester
+./tools/mkfs fs.img fs
+used 29 (bit 1 ninode 26) free 29 total 1024
+forktest
+init
+stressfs
+echo
+sh
+mkdir
+clone3
+kill
+clone2
+rm
+README
+tester
+clone
+grep
+ls
+test
+join2
+cat
+zombie
+usertests
+size
+ln
+wc
+balloc: first 623 blocks have been allocated
+balloc: write bitmap block at sector 28
+rm user/bin/tester
+make qemu-nox 
+Ctrl+a h for help
+/usr/bin/qemu-system-x86_64 -nographic -hdb fs.img xv6.img -smp 2
+xv6...
+lapicinit: 1 0xfee00000
+cpu1: starting
+cpu0: starting
+init: starting sh
+$ tester
+tester
+TEST PASSED
+in wait by tester
+proc is sh
+freeing tester's pgdir
+
+
+test locks PASSED (8 of 8)
+ (test lock correctness)
+
+**********************************************************************
+Summary:
+test build PASSED
+ (build xv6 using make)
+
+test clone PASSED (9 of 9)
+ (clone and verify that address space is shared)
+
+test badclone FAILED (0 of 6)
+ (clone with bad stack argument)
+ tester failed
+
+test join4 PASSED (3 of 3)
+ (join, not wait, should handle threads)
+
+test thread2 PASSED (7 of 7)
+ (memory leaks from thread library?)
+
+test join3 PASSED (3 of 3)
+ (join should not handle child processes (forked))
+
+test join2 PASSED (6 of 6)
+ (join argument checking)
+
+test clone3 PASSED (3 of 3)
+ (clone copies file descriptors, but doesn't share)
+
+test clone2 PASSED (6 of 6)
+ (clone and play with the argument)
+
+test stack PASSED (8 of 8)
+ (set up stack correctly (and without extra items))
+
+test size PASSED (7 of 7)
+ (check that address space size is updated in threads)
+
+test multi PASSED (8 of 8)
+ (multiple threads with some depth of function calls)
+
+test noexit PASSED (7 of 7)
+ (no exit call in thread, should trap at bogus address)
+
+test join PASSED (9 of 9)
+ (clone and join syscalls)
+
+test thread PASSED (10 of 10)
+ (thread user library functions)
+
+test locks PASSED (8 of 8)
+ (test lock correctness)
+
+Passed 15 of 16 tests.
+Overall 15 of 16
+Points 94 of 100

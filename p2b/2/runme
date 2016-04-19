@@ -1,0 +1,2 @@
+#! /bin/bash
+gedit kernel/proc.c kernel/syscall.c kernel/sysproc.c kernel/trap.c kernel/proc.h user/ps.c include/pstat.h&

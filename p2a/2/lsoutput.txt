@@ -1,0 +1,14 @@
+total 43
+drwxrwxr-x 2 shangd shangd  2048 Feb  9 18:41 .
+drwxrwxr-x 4 shangd shangd  2048 Feb  6 19:40 ..
+-rw------- 1 shangd shangd     0 Feb  9 18:41 lsoutput.txt
+-rwxrwxr-x 1 shangd shangd 10719 Feb  9 18:40 mysh
+-rw-rw-r-- 1 shangd shangd  2623 Feb  9 18:40 mysh.c
+-rw-rw-r-- 1 shangd shangd  2619 Feb  6 21:00 mysh.c~
+-rwxrwxr-x 1 shangd shangd  8292 Feb  6 15:18 parse
+-rw-rw-r-- 1 shangd shangd  1124 Feb  6 15:09 parse.c
+-rw-rw-r-- 1 shangd shangd   643 Feb  6 11:51 parse.c~
+-rw------- 1 shangd shangd    38 Feb  6 20:45 pwd.txt
+-rwxrwxr-x 1 shangd shangd  6648 Jan 31 13:45 strtok
+-rw-rw-r-- 1 shangd shangd   291 Jan 31 13:45 strtok.c
+-rw-rw-r-- 1 shangd shangd   292 Jan 31 13:45 strtok.c~

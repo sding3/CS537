@@ -1,0 +1,20 @@
+#include "types.h"
+#include "stat.h"
+#include "user.h"
+#include "pstat.h"
+
+
+int
+main(int argc, char *argv[])
+{
+  setpri(2);
+  
+  int i,j,k;
+  
+  for(i=0,j=23,k=75;i<1000000,i++){
+  	j=(j/2)+i/k;
+  	k=i+j/2;
+  }
+  
+  exit();
+}

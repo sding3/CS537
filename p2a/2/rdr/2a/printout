@@ -1,0 +1,251 @@
+To run:
+1) Navigate to the directory that contains your whoosh.c.
+2) Run the script "runtests" that can be found in this directory. You may
+   copy it to another location if you prefer.
+3) Remember that you can pass the "-h" flag to the script to see more 
+   testing options.
+
+===========================
+!If you are failing a test!
+===========================
+All of the tests for 2a are in the subdirectories in ta/tests/2a/. In most 
+directories you will find 3 files: "in", "out", and "err". Unless otherwise
+noted by a README file in the test subdirectory, "in" is given as a 
+redirection input file to your program, and the expected stdout is in "out" 
+while the expected stderr is in "err".
+
+
+# Built-in Command
+Exit,
+PWD,
+CD,
+BadCD,
+Exec,
+BadExec,
+Path,
+BadPath,
+
+# Formatting
+Line,
+BadLine,
+BadArg,
+WhiteSpace,
+
+# Redirection
+Rdr,
+Rdr2,
+BadRdr,
+BadRdr2,
+
+
+
+==> exit/err <==
+
+==> exit/in <==
+exit
+
+==> exit/out <==
+whoosh> 
+==> pwd/err <==
+
+==> pwd/in <==
+pwd
+exit
+
+==> pwd/README <==
+No stdout file here. Working directory is determined at runtime by the test
+script.
+
+==> cd/err <==
+
+==> cd/in <==
+cd /u
+ls
+cd
+ls
+exit
+
+==> cd/README <==
+No stdout file here. The standard output for each user is determined
+at runtime, due to the nature of "cd".
+
+==> badcd/err <==
+An error has occurred
+
+==> badcd/in <==
+cd /bad
+exit
+
+==> badcd/out <==
+whoosh> whoosh> 
+==> exec/err <==
+
+==> exec/in <==
+uname
+ls /u/
+echo hello world!
+exit
+
+==> exec/out <==
+whoosh> Linux
+whoosh> _
+a
+b
+c
+d
+e
+f
+g
+h
+i
+j
+k
+l
+m
+n
+o
+p
+q
+r
+s
+t
+u
+v
+w
+x
+y
+z
+whoosh> hello world!
+whoosh> 
+==> badexec/err <==
+An error has occurred
+An error has occurred
+An error has occurred
+/bin/ls: cannot access /bad: No such file or directory
+
+==> badexec/in <==
+i-beg-you-do-not-exist
+whoami
+whoosh
+ls /bad
+exit
+
+==> badexec/out <==
+whoosh> whoosh> whoosh> whoosh> whoosh> 
+
+
+==> path/in <==
+path /u/c/s/cs537-1/ta/tests/2a-beta/path
+why did you get a divorce
+exit
+
+==> path/out <==
+whoosh> 
+whoosh> Too many arguments
+whoosh>
+
+==> badpath/err <==
+An error has occurred
+
+==> badpath/in <==
+path  
+exit
+
+==> badpath/out <==
+whoosh> whoosh> 
+==> line/err <==
+
+==> line/in <==
+echo 128 * a
+exit
+
+==> line/out <==
+whoosh> 128 * a
+whoosh> 
+==> badline/err <==
+An error has occurred
+
+==> badline/in <==
+echo 129 * a
+uname
+exit
+
+==> badline/out <==
+whoosh> whoosh> Linux
+whoosh> 
+==> badarg/err <==
+An error has occurred
+
+==> badarg/in <==
+uname
+
+==> badarg/out <==
+
+==> badarg/README <==
+This test has no stdout because it's called as
+./whoosh /extra
+
+"in" is a valid inpu file, but /extra is an 
+extra argument.
+
+==> whitespace/err <==
+
+==> whitespace/in <==
+                    
+
+          echo hello world!
+echo hello world!           
+exit
+
+==> whitespace/out <==
+whoosh> whoosh> whoosh> hello world!
+whoosh> hello world!
+whoosh> 
+==> rdr/err <==
+
+==> rdr/in <==
+uname > output
+exit
+
+==> rdr/out <==
+whoosh> whoosh> 
+==> rdr/output.err <==
+
+==> rdr/output.out <==
+Linux
+
+==> rdr2/err <==
+
+==> rdr2/in <==
+ls /bad > output
+exit
+
+==> rdr2/out <==
+whoosh> whoosh> 
+==> rdr2/output.err <==
+/bin/ls: cannot access /bad: No such file or directory
+
+==> rdr2/output.out <==
+
+==> badrdr/err <==
+An error has occurred
+An error has occurred
+An error has occurred
+
+==> badrdr/in <==
+ls > 1.out 2.out
+ls >
+ls > 1.out > 2.out
+exit
+
+==> badrdr/out <==
+whoosh> whoosh> whoosh> whoosh> 
+==> badrdr2/err <==
+An error has occurred
+
+==> badrdr2/in <==
+/bin/ls > /bogus
+exit
+
+==> badrdr2/out <==
+whoosh> whoosh> 

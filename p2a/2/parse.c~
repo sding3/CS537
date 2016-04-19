@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+
+void
+parse(char *in){
+	char *indup = strdup(in);
+	int argc = 0;
+	char *token;
+	if(in[strlen(in)-1]=='\n')
+		in[strlen(in)-1]=' ';
+		
+	for(; ; argc++){
+		token = strtok(NULL," ");
+		if(token == NULL){
+			break;
+		}
+		printf("%d: %s\n", argc+1, token);
+	}
+	
+	free (indup);
+}
+
+int
+main(int argc,char *argv[]){
+	char *in = malloc(514);
+
+	for(;;){
+			printf("input> ");
+			fgets(in,130,stdin);
+			int l = strlen(in);
+			if(l>128){
+				// input too long
+				write(STDERR_FILENO, error_message,strlen(error_message));
+			}else{/*process input*/
+				parse(in);
+			}
+	}
+}

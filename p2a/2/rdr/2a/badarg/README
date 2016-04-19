@@ -1,0 +1,5 @@
+This test has no stdout because it's called as
+./whoosh /extra
+
+"in" is a valid inpu file, but /extra is an 
+extra argument.

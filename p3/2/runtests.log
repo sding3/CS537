@@ -1,0 +1,278 @@
+starting build
+
+**********************************************************************
+
+Test build
+build project using make
+
+**********************************************************************
+Trying to build project using make
+make
+make: Nothing to be done for `all'.
+
+
+test build PASSED
+ (build project using make)
+
+starting init
+
+**********************************************************************
+
+Test init
+call Mem_Init with size = 1 page
+
+**********************************************************************
+/afs/cs.wisc.edu/p/course/cs537-remzi/ta/tests/3a/tests/init
+
+
+test init PASSED
+ (call Mem_Init with size = 1 page)
+
+starting init2
+
+**********************************************************************
+
+Test init2
+init that should be rounded up to 1 page
+
+**********************************************************************
+/afs/cs.wisc.edu/p/course/cs537-remzi/ta/tests/3a/tests/init2
+
+
+test init2 PASSED
+ (init that should be rounded up to 1 page)
+
+starting alloc
+
+**********************************************************************
+
+Test alloc
+a simple 8 byte allocation
+
+**********************************************************************
+/afs/cs.wisc.edu/p/course/cs537-remzi/ta/tests/3a/tests/alloc
+
+
+test alloc PASSED
+ (a simple 8 byte allocation)
+
+starting alloc2
+
+**********************************************************************
+
+Test alloc2
+a few aligned allocations
+
+**********************************************************************
+/afs/cs.wisc.edu/p/course/cs537-remzi/ta/tests/3a/tests/alloc2
+
+
+test alloc2 PASSED
+ (a few aligned allocations)
+
+starting alloc3
+
+**********************************************************************
+
+Test alloc3
+many odd sized allocations
+
+**********************************************************************
+/afs/cs.wisc.edu/p/course/cs537-remzi/ta/tests/3a/tests/alloc3
+
+
+test alloc3 PASSED
+ (many odd sized allocations)
+
+starting alloc_all
+
+**********************************************************************
+
+Test alloc_all
+Makes sure all space can be used
+
+**********************************************************************
+/afs/cs.wisc.edu/p/course/cs537-remzi/ta/tests/3a/tests/alloc_all
+
+
+test alloc_all PASSED
+ (Makes sure all space can be used)
+
+starting alloc_all2
+
+**********************************************************************
+
+Test alloc_all2
+Makes sure all space can be used, allocations shouldn't quit early
+
+**********************************************************************
+/afs/cs.wisc.edu/p/course/cs537-remzi/ta/tests/3a/tests/alloc_all2
+
+
+test alloc_all2 PASSED
+ (Makes sure all space can be used, allocations shouldn't quit early)
+
+starting free
+
+**********************************************************************
+
+Test free
+a simple allocation followed by a free
+
+**********************************************************************
+/afs/cs.wisc.edu/p/course/cs537-remzi/ta/tests/3a/tests/free
+
+
+test free PASSED
+ (a simple allocation followed by a free)
+
+starting free2
+
+**********************************************************************
+
+Test free2
+a few aligned allocations and frees
+
+**********************************************************************
+/afs/cs.wisc.edu/p/course/cs537-remzi/ta/tests/3a/tests/free2
+
+
+test free2 PASSED
+ (a few aligned allocations and frees)
+
+starting reuse1
+
+**********************************************************************
+
+Test reuse1
+make sure we can keep reusing space
+
+**********************************************************************
+/afs/cs.wisc.edu/p/course/cs537-remzi/ta/tests/3a/tests/reuse1
+
+
+test reuse1 PASSED
+ (make sure we can keep reusing space)
+
+starting reuse2
+
+**********************************************************************
+
+Test reuse2
+make sure we can keep reusing space for equal size allocations
+
+**********************************************************************
+/afs/cs.wisc.edu/p/course/cs537-remzi/ta/tests/3a/tests/reuse2
+
+
+test reuse2 PASSED
+ (make sure we can keep reusing space for equal size allocations)
+
+starting reuse3
+
+**********************************************************************
+
+Test reuse3
+make sure we can keep reusing space for smaller allocations
+
+**********************************************************************
+/afs/cs.wisc.edu/p/course/cs537-remzi/ta/tests/3a/tests/reuse3
+
+
+test reuse3 PASSED
+ (make sure we can keep reusing space for smaller allocations)
+
+starting reuse_all
+
+**********************************************************************
+
+Test reuse_all
+Makes sure all space can be reused, allocations shouldn't quit early
+
+**********************************************************************
+/afs/cs.wisc.edu/p/course/cs537-remzi/ta/tests/3a/tests/reuse_all
+
+
+test reuse_all PASSED
+ (Makes sure all space can be reused, allocations shouldn't quit early)
+
+starting writeable
+
+**********************************************************************
+
+Test writeable
+write to a chunk from Mem_Alloc
+
+**********************************************************************
+/afs/cs.wisc.edu/p/course/cs537-remzi/ta/tests/3a/tests/writeable
+
+
+test writeable PASSED
+ (write to a chunk from Mem_Alloc)
+
+starting nospace
+
+**********************************************************************
+
+Test nospace
+second allocation is too big to fit
+
+**********************************************************************
+/afs/cs.wisc.edu/p/course/cs537-remzi/ta/tests/3a/tests/nospace
+
+
+test nospace PASSED
+ (second allocation is too big to fit)
+
+**********************************************************************
+Summary:
+test build PASSED
+ (build project using make)
+
+test init PASSED
+ (call Mem_Init with size = 1 page)
+
+test init2 PASSED
+ (init that should be rounded up to 1 page)
+
+test alloc PASSED
+ (a simple 8 byte allocation)
+
+test alloc2 PASSED
+ (a few aligned allocations)
+
+test alloc3 PASSED
+ (many odd sized allocations)
+
+test alloc_all PASSED
+ (Makes sure all space can be used)
+
+test alloc_all2 PASSED
+ (Makes sure all space can be used, allocations shouldn't quit early)
+
+test free PASSED
+ (a simple allocation followed by a free)
+
+test free2 PASSED
+ (a few aligned allocations and frees)
+
+test reuse1 PASSED
+ (make sure we can keep reusing space)
+
+test reuse2 PASSED
+ (make sure we can keep reusing space for equal size allocations)
+
+test reuse3 PASSED
+ (make sure we can keep reusing space for smaller allocations)
+
+test reuse_all PASSED
+ (Makes sure all space can be reused, allocations shouldn't quit early)
+
+test writeable PASSED
+ (write to a chunk from Mem_Alloc)
+
+test nospace PASSED
+ (second allocation is too big to fit)
+
+Passed 16 of 16 tests.
+Overall 16 of 16

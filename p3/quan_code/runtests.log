@@ -1,0 +1,49 @@
+starting build
+
+**********************************************************************
+
+Test build
+build project using make
+
+**********************************************************************
+Trying to build project using make
+make
+make: Nothing to be done for `all'.
+
+
+test build PASSED
+ (build project using make)
+
+starting init
+
+**********************************************************************
+
+Test init
+call Mem_Init with size = 1 page
+
+**********************************************************************
+/afs/cs.wisc.edu/p/course/cs537-remzi/ta/tests/3a/tests/init
+
+
+test init PASSED
+ (call Mem_Init with size = 1 page)
+
+starting init2
+
+**********************************************************************
+
+Test init2
+init that should be rounded up to 1 page
+
+**********************************************************************
+/afs/cs.wisc.edu/p/course/cs537-remzi/ta/tests/3a/tests/init2
+init2: wrapper.h:32: AllocWrapper: Assertion `ptr + size <= region + region_size' failed.
+Failure: /afs/cs.wisc.edu/p/course/cs537-remzi/ta/tests/3a/tests/init2 returned incorrect status code. Expected 0 got -6
+
+
+test init2 FAILED
+ (init that should be rounded up to 1 page)
+ /afs/cs.wisc.edu/p/course/cs537-remzi/ta/tests/3a/tests/init2 returned incorrect status code. Expected 0 got -6
+
+Skipped 13 tests.
+To keep testing after failing a test, use flag '-c' or '--continue'
