@@ -1,6 +1,0 @@
- #!/bin/bash
-
-for i in `seq 1 50`;
-	do ~cs537-1/ta/tests/4a/runtests | tail -3 >> final_tests.log
-	 echo "---------------------------" >> final_tests.log
-done  
