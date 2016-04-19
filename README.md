@@ -1,3 +1,2 @@
-#CS537
-#aasdasdasd
-#asdasdad
+CS537
+uw-madison
