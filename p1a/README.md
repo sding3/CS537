@@ -1,6 +1,6 @@
 <body text=black bgcolor=white link=#00aacc vlink=#00aacc alink=orange>
 
-<center><table><tr><td width=500pt>
+<center><table><tr><td width=1000pt>
 
 <center>
 <font color=#00aacc>
