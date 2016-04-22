@@ -1,7 +1,0 @@
- #!/bin/bash
-
-rm -r output
-
-for i in `seq 1 100`;
-	do ./file_tester index.txt|grep '>'|wc -l >> output
-done  
