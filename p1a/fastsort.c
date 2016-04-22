@@ -53,7 +53,7 @@ main(int argc, char *argv[]){
 		column = strtol(option,NULL,10); 
 		if (column >= 0){
 			fprintf(stderr,"Error: Bad command line parameters\n");
-            exit(1);
+            		exit(1);
 		}
 		column = -column;
 		//printf("column: %ld\n",column);
