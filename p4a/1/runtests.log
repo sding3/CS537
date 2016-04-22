@@ -1,0 +1,136 @@
+starting build
+
+**********************************************************************
+
+Test build
+build project using make
+
+**********************************************************************
+Trying to build project using make
+make
+gcc -g -L. -lha -fpic -c crawler.c -Wall -Werror -o crawler.o
+gcc -g -shared -o libcrawler.so libha.so crawler.o
+gcc -g -L. -lcrawler -lpthread file_tester.c -Wall -Werror -o file_tester
+gcc -g -L. -lcrawler -lpthread web_tester.c cs537.c -Wall -Werror -o web_tester
+
+
+test build PASSED
+ (build project using make)
+
+starting single_thread
+
+**********************************************************************
+
+Test single_thread
+Calling crawl with single downloader and parser thread and check if only 1 thread spawned
+
+**********************************************************************
+/afs/cs.wisc.edu/p/course/cs537-remzi/ta/tests/4a/tests/single_thread
+single_thread: single_thread.c:93: main: Assertion `rc == 0' failed.
+downloader got link: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pagea
+Parser consuming PAGE: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pagea 
+downloader got link: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pageb
+downloader got link: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pagec
+downloader got link: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/paged
+Failure: /afs/cs.wisc.edu/p/course/cs537-remzi/ta/tests/4a/tests/single_thread returned incorrect status code. Expected 0 got -6
+
+
+test single_thread FAILED (0 of 10)
+ (Calling crawl with single downloader and parser thread and check if only 1 thread spawned)
+ /afs/cs.wisc.edu/p/course/cs537-remzi/ta/tests/4a/tests/single_thread returned incorrect status code. Expected 0 got -6
+
+starting concurrent_threads
+
+**********************************************************************
+
+Test concurrent_threads
+Checking if multiple downloader and parser threads execute concurrently
+
+**********************************************************************
+/afs/cs.wisc.edu/p/course/cs537-remzi/ta/tests/4a/tests/concurrent_threads
+concurrent_threads: concurrent_threads.c:104: main: Assertion `rc == 0' failed.
+downloader got link: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pagea
+Parser consuming PAGE: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pagea 
+downloader got link: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pagef
+Parser consuming PAGE: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pagef 
+downloader got link: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pagec
+Parser consuming PAGE: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pagec 
+downloader got link: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pageg
+Parser consuming PAGE: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pageg 
+downloader got link: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pagem
+Parser consuming PAGE: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pagem 
+downloader got link: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pageb
+Parser consuming PAGE: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pageb 
+downloader got link: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pagee
+Parser consuming PAGE: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pagee 
+downloader got link: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/paged
+Parser consuming PAGE: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/paged 
+downloader got link: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pagei
+Parser consuming PAGE: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pagei 
+downloader got link: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pagek
+downloader got link: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pagej
+Parser consuming PAGE: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pagej 
+Parser consuming PAGE: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pagek 
+downloader got link: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pagel
+Parser consuming PAGE: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pagel 
+downloader got link: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pageh
+Parser consuming PAGE: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pageh 
+Failure: /afs/cs.wisc.edu/p/course/cs537-remzi/ta/tests/4a/tests/concurrent_threads returned incorrect status code. Expected 0 got -6
+
+
+test concurrent_threads FAILED (0 of 10)
+ (Checking if multiple downloader and parser threads execute concurrently)
+ /afs/cs.wisc.edu/p/course/cs537-remzi/ta/tests/4a/tests/concurrent_threads returned incorrect status code. Expected 0 got -6
+
+starting basic_test
+
+**********************************************************************
+
+Test basic_test
+Check if the program gives the correct output for a simple graph
+
+**********************************************************************
+/afs/cs.wisc.edu/p/course/cs537-remzi/ta/tests/4a/tests/basic_test
+basic_test: basic_test.c:58: main: Assertion `rc == 0' failed.
+downloader got link: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pagea
+Parser consuming PAGE: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pagea 
+downloader got link: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pageg
+Parser consuming PAGE: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pageg 
+downloader got link: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pagef
+Parser consuming PAGE: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pagef 
+downloader got link: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pagem
+Parser consuming PAGE: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pagem 
+downloader got link: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pagel
+Parser consuming PAGE: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pagel 
+downloader got link: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pagee
+Parser consuming PAGE: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pagee 
+downloader got link: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/paged
+Parser consuming PAGE: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/paged 
+downloader got link: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pagek
+Parser consuming PAGE: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pagek 
+downloader got link: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pagej
+Parser consuming PAGE: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pagej 
+downloader got link: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pagec
+Parser consuming PAGE: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pagec 
+downloader got link: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pageb
+Parser consuming PAGE: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pageb 
+downloader got link: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pagei
+Parser consuming PAGE: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pagei 
+downloader got link: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pageh
+Parser consuming PAGE: /u/c/s/cs537-1/ta/tests/4a/tests/files/num_threads/pageh 
+Failure: /afs/cs.wisc.edu/p/course/cs537-remzi/ta/tests/4a/tests/basic_test returned incorrect status code. Expected 0 got -6
+
+
+test basic_test FAILED (0 of 10)
+ (Check if the program gives the correct output for a simple graph)
+ /afs/cs.wisc.edu/p/course/cs537-remzi/ta/tests/4a/tests/basic_test returned incorrect status code. Expected 0 got -6
+
+starting simple_loop
+
+**********************************************************************
+
+Test simple_loop
+Check if the program gives the correct output for a simple loop
+
+**********************************************************************
+/afs/cs.wisc.edu/p/course/cs537-remzi/ta/tests/4a/tests/simple_loop
