@@ -29,4 +29,11 @@ Part b: add thread support into xv6. Implement the following system calls:
 	int join(void **stack)
 	and create a thread library.
 
+---------------------------------------------
+### Project 5: File System 
+http://pages.cs.wisc.edu/~remzi/Classes/537/Spring2016/Projects/p5.html
+
+Part a: write a file system consistency checker(also known as fsck) for the xv6 file system.
+Part b: change the existing xv6 file system to include high performance support for small files. 
+
 
