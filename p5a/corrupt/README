@@ -1,0 +1,67 @@
+badinode:
+    First argument: An already existing good image file
+    Second argument: An inode number to change to a bad type
+    Will overwrite given image file to corrupt it.
+    Example usage: ./badinode fs.img 5
+
+badaddr:
+    First argument: An already existing good image file
+    Second argument: An inode number to change to contain a bad address
+    Third argument: Index of inode's addrs to change to contain bad address
+    Will overwrite given image file to corrupt it. Note: only corrupts direct
+    addresses.
+    Example usage: ./badaddr fs.img 5 0
+
+badroot:
+    First argument: Name of new image file you want to generate with a bad root
+    Second argument: Root directory (can just mkdir and put in a file or two)
+    Will generate a new image with name specified from 1st arg with a bad root 
+    directory.
+    Example usage: ./badroot new.img new
+
+badfmt:
+    First argument: Name of new image file you want to generate with a bad fmt 
+    Second argument: Root directory (can just mkdir and put in a file or two)
+    Will generate a new image with name specified from 1st arg without . and
+    .. directories 
+    Example usage: ./badfmt new.img new
+
+mismatch:
+    First argument: Name of new image file you want to generate with a mismatch
+    Second argument: Root directory, must contain at least one subdirectory
+    Will generate a new image with name specified from 1st arg with .. always 
+    referring to current directory (note that if root has no subdirectories,
+    the resulting image file will be valid).
+    Example usage: ./mismatch new.img new
+
+mrkfree:
+    First argument: An already existing good image file
+    Second argument: An inode number whose address we want to mark free
+    Third argument: Index of inode's addrs to mark free
+    Will overwrite given image file to corrupt it. Note: Only corrupts direct
+    addresses.
+    Example usage: ./mrkfree fs.img 1 0
+
+mrkused:
+    First argument: An already existing good image file
+    Second argument: Address to mark used
+    Will overwrite given image file to corrupt it. Might produce a good fs.
+    Example usage: ./mrkused fs.img 150 
+
+imrkfree:
+    First argument: An already existing good image file
+    Second argument: An inode number to mark free
+    Will overwrite given image file to corrupt it. Might produce a good fs.
+    Example usage: ./imrkfree fs.img 5
+
+imrkused:
+    First argument: An already existing good image file
+    Second argument: An inode number to mark used
+    Will overwrite given image file to corrupt it. Might produce a good fs.
+    Example usage: ./imrkused fs.img 150
+
+badrefcnt:
+    First argument: An already existing good image file
+    Second argument: An inode number to increment reference count
+    Will overwrite given image file to corrupt it.
+    Example usage: ./badrefcnt fs.img 5

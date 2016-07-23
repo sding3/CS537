@@ -1,0 +1,5 @@
+ff      ff      ff       e7 (1110 0111)
+0-7     8-15    15-23    24-31
+                         block 27 28 are wrongly marked as free 
+                         27 - it looks like its an empty block after inodes and b4 bitmap
+                         28 - b/c I forgot to mark the bitmap block

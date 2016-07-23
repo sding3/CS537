@@ -1,0 +1,959 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BuildServerSettings">
+    <option name="LOGIN" value="" />
+    <option name="SERVER_URL" value="http://buildserver" />
+    <option name="PASSWORD" />
+    <option name="REMEMBER_ME" value="true" />
+    <option name="USE_IDEA_PROXY_SETTINGS" value="true" />
+    <option name="INSPECTIONS_BUILD_TYPE_IDS" />
+    <option name="DUPLICATES_BUILD_TYPE_IDS" />
+    <option name="COVERAGE_SETTINGS" />
+    <option name="TEST_STATUS_ENABLED" value="true" />
+    <option name="TEST_STATUS_SHOW_SUCCESSFUL" value="false" />
+    <option name="ARTIFACTS_BUILD_TYPE_IDS" />
+    <option name="PERFORM_COMMIT_IF_SUCCESSFUL" value="true" />
+    <option name="PERFORM_COMMIT_IF_NO_NEW_FAILED_TESTS" value="false" />
+    <option name="REQUEST_CONFIRMATON" value="false" />
+    <option name="PRE_TESTED_COMMIT" value="true" />
+    <option name="PROJECT_STATUS_DIALOG_SPLITTER_DIVIDER_LOCATION" value="500" />
+    <option name="CHANGES_STATUS_DIALOG_SPLITTER_DIVIDER_LOCATION" value="500" />
+    <option name="FILTER_BY_STATUS" value="false" />
+    <option name="FILTER_MARKED_AS_FIXED" value="false" />
+    <option name="SHOW_CLOSE_PROMPT" value="true" />
+    <option name="TOOL_WINDOW_SELECTED_CONTENT_INDEX" value="0" />
+    <option name="FILTER_BY_CURRENT_PROJECT" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" assignedExecutableTargets="true" buildAllGenerated="true">
+    <generated>
+      <config projectName="xv6" targetName="xv6" />
+    </generated>
+  </component>
+  <component name="CMakeSettings" AUTO_RELOAD="false" GENERATION_PASS_SYSTEM_ENVIRONMENT="true">
+    <ADDITIONAL_GENERATION_ENVIRONMENT>
+      <envs />
+    </ADDITIONAL_GENERATION_ENVIRONMENT>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3a55dc93-fc25-49be-8182-35b3f1f8c96d" name="Default" comment="" />
+    <ignored path="xv6.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="xv6" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="stat.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/stat.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fcntl.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/fcntl.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sysfile.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/kernel/sysfile.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="690">
+              <caret line="238" column="23" selection-start-line="238" selection-start-column="23" selection-end-line="238" selection-end-column="23" />
+              <folding>
+                <element signature="e#184#614#0" expanded="false" />
+                <element signature="e#616#943#0" expanded="false" />
+                <element signature="e#945#1128#0" expanded="false" />
+                <element signature="e#1516#1679#0" expanded="false" />
+                <element signature="e#1681#1866#0" expanded="false" />
+                <element signature="e#1868#2619#0" expanded="false" />
+                <element signature="e#2621#3003#0" expanded="false" />
+                <element signature="e#3005#4006#0" expanded="false" />
+                <element signature="e#6135#6321#0" expanded="false" />
+                <element signature="e#6323#6634#0" expanded="false" />
+                <element signature="e#6636#6943#0" expanded="false" />
+                <element signature="e#6945#7521#0" expanded="false" />
+                <element signature="e#7523#7985#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="file.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/kernel/file.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="395">
+              <caret line="103" column="20" selection-start-line="103" selection-start-column="20" selection-end-line="103" selection-end-column="20" />
+              <folding>
+                <element signature="e#139#200#1" expanded="false" />
+                <element signature="e#210#269#0" expanded="false" />
+                <element signature="e#271#562#0" expanded="false" />
+                <element signature="e#564#752#0" expanded="false" />
+                <element signature="e#754#1183#0" expanded="false" />
+                <element signature="e#1185#1382#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fs.c" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/kernel/fs.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="786">
+              <caret line="474" column="0" selection-start-line="474" selection-start-column="0" selection-end-line="474" selection-end-column="0" />
+              <folding>
+                <element signature="e#891#1071#0" expanded="false" />
+                <element signature="e#1073#1240#0" expanded="false" />
+                <element signature="e#1255#2096#0" expanded="false" />
+                <element signature="e#2098#2510#0" expanded="false" />
+                <element signature="e#2512#2522#0" expanded="false" />
+                <element signature="e#4064#4132#1" expanded="false" />
+                <element signature="e#4142#4200#0" expanded="false" />
+                <element signature="e#4251#4951#0" expanded="false" />
+                <element signature="e#4953#5408#0" expanded="false" />
+                <element signature="e#5410#6200#0" expanded="false" />
+                <element signature="e#6202#6410#0" expanded="false" />
+                <element signature="e#6412#7194#0" expanded="false" />
+                <element signature="e#7196#7437#0" expanded="false" />
+                <element signature="e#7439#7997#0" expanded="false" />
+                <element signature="e#7999#8102#0" expanded="false" />
+                <element signature="e#8104#8121#0" expanded="false" />
+                <element signature="e#8357#9183#0" expanded="false" />
+                <element signature="e#9185#9937#0" expanded="false" />
+                <element signature="e#9939#10149#0" expanded="false" />
+                <element signature="e#13014#13093#0" expanded="false" />
+                <element signature="e#13095#14080#0" expanded="false" />
+                <element signature="e#14082#14805#0" expanded="false" />
+                <element signature="e#14817#15759#0" expanded="false" />
+                <element signature="e#15761#16720#0" expanded="false" />
+                <element signature="e#16722#16814#0" expanded="false" />
+                <element signature="e#16816#16903#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="file.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/kernel/file.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="621">
+              <caret line="27" column="2" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fs.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/fs.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="713">
+              <caret line="31" column="22" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/include/stat.h" />
+        <option value="$PROJECT_DIR$/include/fcntl.h" />
+        <option value="$PROJECT_DIR$/kernel/sysfile.c" />
+        <option value="$PROJECT_DIR$/kernel/fs.c" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="49" />
+    <option name="width" value="1871" />
+    <option name="height" value="1200" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xv6" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xv6" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xv6" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xv6" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xv6" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kernel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+  </component>
+  <component name="RunManager" selected="Application.Build All">
+    <configuration default="true" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS_2="true" PROJECT_NAME="xv6" TARGET_NAME="xv6" CONFIG_NAME="Debug" TEST_MODE="SUITE_TEST">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="xv6" TARGET_NAME="xv6" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="xv6" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="xv6" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="xv6" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="xv6" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="xv6" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="xv6" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="xv6" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="xv6" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="xv6" TARGET_NAME="xv6" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="xv6" RUN_TARGET_NAME="xv6">
+      <envs />
+      <method />
+    </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Application.Build All" />
+      <item index="1" class="java.lang.String" itemvalue="Application.xv6" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3a55dc93-fc25-49be-8182-35b3f1f8c96d" name="Default" comment="" />
+      <created>1461727646064</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1461727646064</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="49" y="0" width="1871" height="1200" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20791021" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TeamCity" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32892057" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/include/stat.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/fcntl.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kernel/sysfile.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#184#614#0" expanded="false" />
+            <element signature="e#616#943#0" expanded="false" />
+            <element signature="e#945#1128#0" expanded="false" />
+            <element signature="e#1516#1679#0" expanded="false" />
+            <element signature="e#1681#1866#0" expanded="false" />
+            <element signature="e#1868#2619#0" expanded="false" />
+            <element signature="e#2621#3003#0" expanded="false" />
+            <element signature="e#3005#4006#0" expanded="false" />
+            <element signature="e#6135#6321#0" expanded="false" />
+            <element signature="e#6323#6634#0" expanded="false" />
+            <element signature="e#6636#6943#0" expanded="false" />
+            <element signature="e#6945#7521#0" expanded="false" />
+            <element signature="e#7523#7985#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kernel/file.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+          <folding>
+            <element signature="e#139#200#1" expanded="false" />
+            <element signature="e#210#269#0" expanded="false" />
+            <element signature="e#271#562#0" expanded="false" />
+            <element signature="e#564#752#0" expanded="false" />
+            <element signature="e#754#1183#0" expanded="false" />
+            <element signature="e#1185#1382#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kernel/fs.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10787">
+          <caret line="469" column="15" selection-start-line="469" selection-start-column="15" selection-end-line="469" selection-end-column="15" />
+          <folding>
+            <element signature="e#891#1071#0" expanded="false" />
+            <element signature="e#1073#1240#0" expanded="false" />
+            <element signature="e#1255#2096#0" expanded="false" />
+            <element signature="e#2098#2510#0" expanded="false" />
+            <element signature="e#2512#2522#0" expanded="false" />
+            <element signature="e#4064#4132#1" expanded="false" />
+            <element signature="e#4142#4200#0" expanded="false" />
+            <element signature="e#4251#4951#0" expanded="false" />
+            <element signature="e#4953#5408#0" expanded="false" />
+            <element signature="e#5410#6200#0" expanded="false" />
+            <element signature="e#6202#6410#0" expanded="false" />
+            <element signature="e#6412#7194#0" expanded="false" />
+            <element signature="e#7196#7437#0" expanded="false" />
+            <element signature="e#7439#7997#0" expanded="false" />
+            <element signature="e#7999#8102#0" expanded="false" />
+            <element signature="e#8104#8121#0" expanded="false" />
+            <element signature="e#8357#9183#0" expanded="false" />
+            <element signature="e#9185#9937#0" expanded="false" />
+            <element signature="e#9939#10149#0" expanded="false" />
+            <element signature="e#13014#13093#0" expanded="false" />
+            <element signature="e#13095#14080#0" expanded="false" />
+            <element signature="e#14082#14805#0" expanded="false" />
+            <element signature="e#14817#15759#0" expanded="false" />
+            <element signature="e#15761#16720#0" expanded="false" />
+            <element signature="e#16722#16814#0" expanded="false" />
+            <element signature="e#16816#16903#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/mkfs.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4600">
+          <caret line="200" column="22" selection-start-line="200" selection-start-column="22" selection-end-line="200" selection-end-column="22" />
+          <folding>
+            <element signature="e#850#986#0" expanded="false" />
+            <element signature="e#988#1121#0" expanded="false" />
+            <element signature="e#1124#1775#0" expanded="false" />
+            <element signature="e#1777#3685#0" expanded="false" />
+            <element signature="e#4298#4493#0" expanded="false" />
+            <element signature="e#4495#4545#0" expanded="false" />
+            <element signature="e#4547#4757#0" expanded="false" />
+            <element signature="e#4759#4951#0" expanded="false" />
+            <element signature="e#4953#5146#0" expanded="false" />
+            <element signature="e#5148#5364#0" expanded="false" />
+            <element signature="e#5366#5708#0" expanded="false" />
+            <element signature="e#5753#6911#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/stat.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/fcntl.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kernel/sysfile.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5934">
+          <caret line="258" column="1" selection-start-line="258" selection-start-column="1" selection-end-line="258" selection-end-column="1" />
+          <folding>
+            <element signature="e#184#614#0" expanded="false" />
+            <element signature="e#616#943#0" expanded="false" />
+            <element signature="e#945#1128#0" expanded="false" />
+            <element signature="e#1516#1679#0" expanded="false" />
+            <element signature="e#1681#1866#0" expanded="false" />
+            <element signature="e#1868#2619#0" expanded="false" />
+            <element signature="e#2621#3003#0" expanded="false" />
+            <element signature="e#3005#4006#0" expanded="false" />
+            <element signature="e#6135#6321#0" expanded="false" />
+            <element signature="e#6323#6634#0" expanded="false" />
+            <element signature="e#6636#6943#0" expanded="false" />
+            <element signature="e#6945#7521#0" expanded="false" />
+            <element signature="e#7523#7985#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kernel/file.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+          <folding>
+            <element signature="e#139#200#1" expanded="false" />
+            <element signature="e#210#269#0" expanded="false" />
+            <element signature="e#271#562#0" expanded="false" />
+            <element signature="e#564#752#0" expanded="false" />
+            <element signature="e#754#1183#0" expanded="false" />
+            <element signature="e#1185#1382#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kernel/fs.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#891#1071#0" expanded="false" />
+            <element signature="e#1073#1240#0" expanded="false" />
+            <element signature="e#1255#2096#0" expanded="false" />
+            <element signature="e#2098#2510#0" expanded="false" />
+            <element signature="e#2512#2522#0" expanded="false" />
+            <element signature="e#4064#4132#1" expanded="false" />
+            <element signature="e#4142#4200#0" expanded="false" />
+            <element signature="e#4251#4951#0" expanded="false" />
+            <element signature="e#4953#5408#0" expanded="false" />
+            <element signature="e#5410#6200#0" expanded="false" />
+            <element signature="e#6202#6410#0" expanded="false" />
+            <element signature="e#6412#7194#0" expanded="false" />
+            <element signature="e#7196#7437#0" expanded="false" />
+            <element signature="e#7439#7997#0" expanded="false" />
+            <element signature="e#7999#8102#0" expanded="false" />
+            <element signature="e#8104#8121#0" expanded="false" />
+            <element signature="e#8357#9183#0" expanded="false" />
+            <element signature="e#9185#9937#0" expanded="false" />
+            <element signature="e#9939#10149#0" expanded="false" />
+            <element signature="e#13014#13093#0" expanded="false" />
+            <element signature="e#13095#14080#0" expanded="false" />
+            <element signature="e#14082#14805#0" expanded="false" />
+            <element signature="e#14817#15759#0" expanded="false" />
+            <element signature="e#15761#16720#0" expanded="false" />
+            <element signature="e#16722#16814#0" expanded="false" />
+            <element signature="e#16816#16903#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/mkfs.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#850#986#0" expanded="false" />
+            <element signature="e#988#1121#0" expanded="false" />
+            <element signature="e#1124#1775#0" expanded="false" />
+            <element signature="e#1777#3685#0" expanded="false" />
+            <element signature="e#4298#4493#0" expanded="false" />
+            <element signature="e#4495#4545#0" expanded="false" />
+            <element signature="e#4547#4757#0" expanded="false" />
+            <element signature="e#4759#4951#0" expanded="false" />
+            <element signature="e#4953#5146#0" expanded="false" />
+            <element signature="e#5148#5364#0" expanded="false" />
+            <element signature="e#5366#5708#0" expanded="false" />
+            <element signature="e#5753#6911#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/stat.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/fcntl.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kernel/sysfile.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="e#184#614#0" expanded="false" />
+            <element signature="e#616#943#0" expanded="false" />
+            <element signature="e#945#1128#0" expanded="false" />
+            <element signature="e#1516#1679#0" expanded="false" />
+            <element signature="e#1681#1866#0" expanded="false" />
+            <element signature="e#1868#2619#0" expanded="false" />
+            <element signature="e#2621#3003#0" expanded="false" />
+            <element signature="e#3005#4006#0" expanded="false" />
+            <element signature="e#6135#6321#0" expanded="false" />
+            <element signature="e#6323#6634#0" expanded="false" />
+            <element signature="e#6636#6943#0" expanded="false" />
+            <element signature="e#6945#7521#0" expanded="false" />
+            <element signature="e#7523#7985#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kernel/file.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+          <folding>
+            <element signature="e#139#200#1" expanded="false" />
+            <element signature="e#210#269#0" expanded="false" />
+            <element signature="e#271#562#0" expanded="false" />
+            <element signature="e#564#752#0" expanded="false" />
+            <element signature="e#754#1183#0" expanded="false" />
+            <element signature="e#1185#1382#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kernel/fs.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10810">
+          <caret line="470" column="1" selection-start-line="470" selection-start-column="1" selection-end-line="470" selection-end-column="1" />
+          <folding>
+            <element signature="e#891#1071#0" expanded="false" />
+            <element signature="e#1073#1240#0" expanded="false" />
+            <element signature="e#1255#2096#0" expanded="false" />
+            <element signature="e#2098#2510#0" expanded="false" />
+            <element signature="e#2512#2522#0" expanded="false" />
+            <element signature="e#4064#4132#1" expanded="false" />
+            <element signature="e#4142#4200#0" expanded="false" />
+            <element signature="e#4251#4951#0" expanded="false" />
+            <element signature="e#4953#5408#0" expanded="false" />
+            <element signature="e#5410#6200#0" expanded="false" />
+            <element signature="e#6202#6410#0" expanded="false" />
+            <element signature="e#6412#7194#0" expanded="false" />
+            <element signature="e#7196#7437#0" expanded="false" />
+            <element signature="e#7439#7997#0" expanded="false" />
+            <element signature="e#7999#8102#0" expanded="false" />
+            <element signature="e#8104#8121#0" expanded="false" />
+            <element signature="e#8357#9183#0" expanded="false" />
+            <element signature="e#9185#9937#0" expanded="false" />
+            <element signature="e#9939#10149#0" expanded="false" />
+            <element signature="e#13014#13093#0" expanded="false" />
+            <element signature="e#13095#14080#0" expanded="false" />
+            <element signature="e#14082#14805#0" expanded="false" />
+            <element signature="e#14817#15759#0" expanded="false" />
+            <element signature="e#15761#16720#0" expanded="false" />
+            <element signature="e#16722#16814#0" expanded="false" />
+            <element signature="e#16816#16903#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-621">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/mkfs.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-575">
+          <caret line="35" column="24" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
+          <folding>
+            <element signature="e#850#986#0" expanded="false" />
+            <element signature="e#988#1121#0" expanded="false" />
+            <element signature="e#1124#1775#0" expanded="false" />
+            <element signature="e#1777#3685#0" expanded="false" />
+            <element signature="e#4298#4493#0" expanded="false" />
+            <element signature="e#4495#4545#0" expanded="false" />
+            <element signature="e#4547#4757#0" expanded="false" />
+            <element signature="e#4759#4951#0" expanded="false" />
+            <element signature="e#4953#5146#0" expanded="false" />
+            <element signature="e#5148#5364#0" expanded="false" />
+            <element signature="e#5366#5708#0" expanded="false" />
+            <element signature="e#5753#6911#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/stat.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/fcntl.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/fs.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="713">
+          <caret line="31" column="22" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kernel/sysfile.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="238" column="23" selection-start-line="238" selection-start-column="23" selection-end-line="238" selection-end-column="23" />
+          <folding>
+            <element signature="e#184#614#0" expanded="false" />
+            <element signature="e#616#943#0" expanded="false" />
+            <element signature="e#945#1128#0" expanded="false" />
+            <element signature="e#1516#1679#0" expanded="false" />
+            <element signature="e#1681#1866#0" expanded="false" />
+            <element signature="e#1868#2619#0" expanded="false" />
+            <element signature="e#2621#3003#0" expanded="false" />
+            <element signature="e#3005#4006#0" expanded="false" />
+            <element signature="e#6135#6321#0" expanded="false" />
+            <element signature="e#6323#6634#0" expanded="false" />
+            <element signature="e#6636#6943#0" expanded="false" />
+            <element signature="e#6945#7521#0" expanded="false" />
+            <element signature="e#7523#7985#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kernel/file.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="103" column="20" selection-start-line="103" selection-start-column="20" selection-end-line="103" selection-end-column="20" />
+          <folding>
+            <element signature="e#139#200#1" expanded="false" />
+            <element signature="e#210#269#0" expanded="false" />
+            <element signature="e#271#562#0" expanded="false" />
+            <element signature="e#564#752#0" expanded="false" />
+            <element signature="e#754#1183#0" expanded="false" />
+            <element signature="e#1185#1382#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kernel/file.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="27" column="2" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kernel/console.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kernel/fs.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="786">
+          <caret line="474" column="0" selection-start-line="474" selection-start-column="0" selection-end-line="474" selection-end-column="0" />
+          <folding>
+            <element signature="e#891#1071#0" expanded="false" />
+            <element signature="e#1073#1240#0" expanded="false" />
+            <element signature="e#1255#2096#0" expanded="false" />
+            <element signature="e#2098#2510#0" expanded="false" />
+            <element signature="e#2512#2522#0" expanded="false" />
+            <element signature="e#4064#4132#1" expanded="false" />
+            <element signature="e#4142#4200#0" expanded="false" />
+            <element signature="e#4251#4951#0" expanded="false" />
+            <element signature="e#4953#5408#0" expanded="false" />
+            <element signature="e#5410#6200#0" expanded="false" />
+            <element signature="e#6202#6410#0" expanded="false" />
+            <element signature="e#6412#7194#0" expanded="false" />
+            <element signature="e#7196#7437#0" expanded="false" />
+            <element signature="e#7439#7997#0" expanded="false" />
+            <element signature="e#7999#8102#0" expanded="false" />
+            <element signature="e#8104#8121#0" expanded="false" />
+            <element signature="e#8357#9183#0" expanded="false" />
+            <element signature="e#9185#9937#0" expanded="false" />
+            <element signature="e#9939#10149#0" expanded="false" />
+            <element signature="e#13014#13093#0" expanded="false" />
+            <element signature="e#13095#14080#0" expanded="false" />
+            <element signature="e#14082#14805#0" expanded="false" />
+            <element signature="e#14817#15759#0" expanded="false" />
+            <element signature="e#15761#16720#0" expanded="false" />
+            <element signature="e#16722#16814#0" expanded="false" />
+            <element signature="e#16816#16903#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

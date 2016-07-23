@@ -1,0 +1,33 @@
+1024 995 200 inodes
+0 type: 0 @block 2
+	nlink: 0  size: 0
+	DataBlock #: 0 
+	DataBlock #: 0 
+	DataBlock #: 0 
+	DataBlock #: 0 
+	DataBlock #: 0 
+	DataBlock #: 0 
+	DataBlock #: 0 
+	DataBlock #: 0 
+	DataBlock #: 0 
+	DataBlock #: 0 
+	DataBlock #: 0 
+	DataBlock #: 0 
+	DataBlock #: 0 
+
+1 type: 1 @block 2
+	nlink: 1  size: 512
+	DataBlock #: 29 	Data: 1-.	Data: 1-..	Data: 2-fulldirect	Data: 3-maxfile	Data: 4-oneindir	Data: 5-onedir	Data: 6-emptyfile	Data: 7-dir1	Data: 10-dir2	Data: 14-bigdir
+	DataBlock #: 0 
+	DataBlock #: 0 
+	DataBlock #: 0 
+	DataBlock #: 0 
+	DataBlock #: 0 
+	DataBlock #: 0 
+	DataBlock #: 0 
+	DataBlock #: 0 
+	DataBlock #: 0 
+	DataBlock #: 0 
+	DataBlock #: 0 
+	DataBlock #: 0 
+
